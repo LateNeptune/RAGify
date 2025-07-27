@@ -145,7 +145,7 @@ def query_collection(prompt: str, n_results: int = 10):
 
 def call_llm(context: str, prompt: str):
     response = ollama.chat(
-        model="llama3.2:3b",
+        model="llama3.2:latest",
         stream=True,
         messages=[
             {
@@ -205,7 +205,7 @@ if __name__ == "__main__":
 
         process = st.button("⚙️ Process")
 
-        st.divider()
+        st.markdown("---")
 
         # Database management section
         st.subheader("🗄️ Database Management")

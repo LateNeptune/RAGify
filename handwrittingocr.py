@@ -11,7 +11,7 @@ from typing import List, Tuple
 import streamlit as st
 
 # Add Poppler to PATH if not already there
-poppler_path = r"C:\Users\temp_dude\Downloads\poppler-24.08.0\Library\bin"
+poppler_path = r"C:\Release-24.08.0-0.zip\poppler-24.08.0\Library\bin"
 if poppler_path not in os.environ.get('PATH', ''):
     os.environ['PATH'] = poppler_path + os.pathsep + os.environ.get('PATH', '')
 
@@ -134,6 +134,7 @@ class HandwritingOCR:
             # Try multiple methods to convert PDF to images
             pages = None
             poppler_paths = [
+                r"C:\Release-24.08.0-0.zip\poppler-24.08.0\Library\bin",
                 r"C:\Users\temp_dude\Downloads\poppler-24.08.0\Library\bin",
                 r"C:\poppler\Library\bin",
                 r"C:\Program Files\poppler\bin",
